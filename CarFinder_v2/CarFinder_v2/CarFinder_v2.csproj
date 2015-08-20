@@ -203,6 +203,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201508201837491_second.cs" />
+    <Compile Include="Migrations\201508201837491_second.Designer.cs">
+      <DependentUpon>201508201837491_second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508201917209_third.cs" />
+    <Compile Include="Migrations\201508201917209_third.Designer.cs">
+      <DependentUpon>201508201917209_third.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -280,6 +288,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201508201837491_second.resx">
+      <DependentUpon>201508201837491_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508201917209_third.resx">
+      <DependentUpon>201508201917209_third.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

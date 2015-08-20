@@ -15,7 +15,7 @@ namespace CarFinder_v2.Models
         public string body_style { get; set; }
 
         public string engine_fuel { get; set; }
-        public string fuel_capacity { get; set; }
+        public string fuel_capacity_l { get; set; }
         public string transmission_type { get; set; }
 
     }

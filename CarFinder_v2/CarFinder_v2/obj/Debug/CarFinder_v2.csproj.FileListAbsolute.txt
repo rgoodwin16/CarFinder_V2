@@ -61,3 +61,6 @@ C:\Users\nanye\Documents\GitHub\CarFinder_V2\CarFinder_v2\CarFinder_v2\bin\Syste
 C:\Users\nanye\Documents\GitHub\CarFinder_V2\CarFinder_v2\CarFinder_v2\obj\Debug\CarFinder_v2.csprojResolveAssemblyReference.cache
 C:\Users\nanye\Documents\GitHub\CarFinder_V2\CarFinder_v2\CarFinder_v2\obj\Debug\CarFinder_v2.dll
 C:\Users\nanye\Documents\GitHub\CarFinder_V2\CarFinder_v2\CarFinder_v2\obj\Debug\CarFinder_v2.pdb
+C:\Users\nanye\Documents\GitHub\CarFinder_V2\CarFinder_v2\CarFinder_v2\obj\Debug\CarFinder_v2.Migrations.second.resources
+C:\Users\nanye\Documents\GitHub\CarFinder_V2\CarFinder_v2\CarFinder_v2\obj\Debug\CarFinder_v2.csproj.GenerateResource.Cache
+C:\Users\nanye\Documents\GitHub\CarFinder_V2\CarFinder_v2\CarFinder_v2\obj\Debug\CarFinder_v2.Migrations.third.resources

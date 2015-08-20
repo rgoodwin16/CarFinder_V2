@@ -32,6 +32,12 @@ namespace CarFinder_v2.Controllers
             return await db.GetModels(year, make);
         }
 
+        [Route("GetTrims")]
+        public async Task<List<string>> GetTrims(int year, string make, string model)
+        {
+            return await db.GetTrims(year, make, model);
+        }
+
         [Route("GetCars")]
         public async Task<List<Car>> GetCars(int year, string make, string model, string trim, string filter = null, bool paging = false, int? page = null, int? perPage = null)
         {
