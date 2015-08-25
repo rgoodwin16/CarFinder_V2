@@ -1,0 +1,192 @@
+/*-----------------------------------------------------------------------------------------------
+Project:  Mos7 - Responsive Bootstrap 3 App Landing Page Template
+Version:  1.5.2
+Last change:  25/06/2015
+Design by:  TemplatesPRO.com.br
+
+Structure (line):
+1) NAVBAR (48)
+2) HEADERS - Sections (61)
+3) SLIDESHOW (72)
+    - Slideshow Content - Buttons (75)
+    - Slideshow - Countdown (93)
+    - Slideshow - Indicators (96)
+4) FEATURES (105)
+    - Section Content - Icons (108)
+    - Features Titles (112)
+5) OVERVIEW (117)
+    - Overview Titles (120)
+    - Tab 2 (123)
+    - Tab 3 (127)
+6) STATS (132)
+7) GALLERY (140)
+    - Gallery Navigation (143)
+8) TESTIMONIALS (149)
+    - Testimonials Navigation and Links (152)
+9) PRICING (157)
+10) TEAM (168)
+11) CONTACT (176)
+    - Icon (179)
+    - Links (183)
+12) COPYRIGHT (188)
+    - Button Go Top (191)
+-----------------------------------------------------------------------------------------------*/
+
+a { color: #2ecc71; }
+.btn {
+  color: #fff;
+  background-color: #2ecc71;
+}
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.open>.dropdown-toggle.btn { background-color: #29b765; }
+
+
+/***********************************************************************************************
+ 1) NAVBAR
+ ***********************************************************************************************/
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-nav>li>a:hover,
+.navbar-nav>.active>a { color: #2ecc71; }
+
+
+/***********************************************************************************************
+ 2) HEADERS - Sections
+ ***********************************************************************************************/
+
+.section-title {
+  border-bottom: 1px solid #2ecc71;
+  color: #2ecc71;
+}
+.section-subtitle::after { background-color: #2ecc71; }
+
+
+/***********************************************************************************************
+ 3) SLIDESHOW
+ ***********************************************************************************************/
+
+/* Slideshow Content - Buttons ................................................................*/
+.slideshow .btn {
+  border: 2px solid #2ecc71;
+  background-color: rgba(46, 204, 113, 0.15);
+}
+.slideshow .btn:hover {
+  border: 2px solid #2ecc71;
+  background-color: #2ecc71;
+}
+.slideshow .slide-form .panel .btn {
+  border: 2px solid #2ecc71;
+  background-color: #2ecc71;
+}
+.slideshow .slide-form .panel .btn:hover {
+  border: 2px solid #29b765;
+  background-color: #29b765;
+}
+
+/* Slideshow - Countdown .....................................................................*/
+.slideshow .countdown .count { background-color: #2ecc71; }
+
+/* Slideshow - Indicators .....................................................................*/
+.slideshow .carousel-indicators li:hover { border: 1px solid #2ecc71; }
+.slideshow .carousel-indicators .active {
+  border: 1px solid #2ecc71;
+  background-color: #2ecc71;
+}
+
+
+/***********************************************************************************************
+ 4) FEATURES
+ ***********************************************************************************************/
+
+/* Section Content - Icons ....................................................................*/
+.features .features-icon { color: #2ecc71; }
+.features .features-wrapper:hover .features-icon { background-color: #2ecc71; }
+
+/* Features Titles ............................................................................*/
+.features .features-content .title { color: #2ecc71; }
+
+
+/***********************************************************************************************
+ 5) OVERVIEW
+ ***********************************************************************************************/
+
+/* Overview Titles ............................................................................*/
+.overview .title { color: #2ecc71; }
+
+/* Tab 2 ......................................................................................*/
+.overview .overview-icon { color: #2ecc71; }
+.overview .overview-wrapper:hover .overview-icon { background-color: #2ecc71; }
+
+/* Tab 3 ......................................................................................*/
+.overview .progress-bar { background-color: #2ecc71; }
+
+
+/***********************************************************************************************
+ 6) STATS
+ ***********************************************************************************************/
+
+path + path { stroke: #2ecc71; }
+.stats .description span { color: #2ecc71; }
+
+
+/***********************************************************************************************
+ 7) GALLERY
+ ***********************************************************************************************/
+
+/* Gallery Navigation .........................................................................*/
+.gallery .slick-dots li button:before,
+.gallery .slick-dots .slick-active button:before { color: #2ecc71; }
+
+
+/***********************************************************************************************
+ 8) TESTIMONIALS
+ ***********************************************************************************************/
+
+/* Testimonials Navigation and Links ..........................................................*/
+.testimonials a { color: #2ecc71; }
+
+
+/***********************************************************************************************
+ 9) PRICING
+ ***********************************************************************************************/
+
+.plan-price { background-color: #2ecc71; }
+.panel:hover .plan-price { background-color: #2ecc71; }
+.panel-popular .plan-price:before { box-shadow: 0 0 0 2px #2ecc71; }
+.pricing .panel:hover .panel-heading { color: #2ecc71; }
+.pricing .badge-popular { background: url(../../images/pricing/badge_popular_emerald.png) no-repeat center center; }
+
+
+/***********************************************************************************************
+ 10) TEAM
+ ***********************************************************************************************/
+
+.team .team-content .name { color: #2ecc71; }
+.team .team-media .team-social { color: #2ecc71; }
+
+
+/***********************************************************************************************
+ 11) CONTACT
+ ***********************************************************************************************/
+
+/* Icon .......................................................................................*/
+.contact .map-title a { color: #2ecc71; }
+.contact .map-title:hover { background-color: #2ecc71; }
+
+/* Links ......................................................................................*/
+.contact .vcard a { color: #2ecc71; }
+
+
+/***********************************************************************************************
+ 12) COPYRIGHT
+ ***********************************************************************************************/
+
+/* Button Go Top ..............................................................................*/
+.go-top:hover { color: #2ecc71; }

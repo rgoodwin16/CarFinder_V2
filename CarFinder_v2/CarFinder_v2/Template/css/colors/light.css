@@ -1,0 +1,362 @@
+/*-----------------------------------------------------------------------------------------------
+Project:  Mos7 - Responsive Bootstrap 3 App Landing Page Template
+Version:  1.5.2
+Last change:  25/06/2015
+Design by:  TemplatesPRO.com.br
+
+Structure (line):
+1) PRELOADER (47)
+2) NAVBAR - NAVBAR TOGGLE (55)
+    - Logo (70)
+    - Toggle (76)
+        - Media Queries - Toggle (83)
+3) SECTIONS (91)
+4) HEADERS - Sections (104)
+5) SLIDESHOW (112)
+6) FEATURES (130)
+    - Icons (133)
+7) OVERVIEW (143)
+    - Tabs (146)
+        - Media Queries - Tabs (165)
+    - Subtitles (173)
+    - Icons (176)
+    - Progress Bars (181)
+8) STATS (186)
+9) GALLERY (198)
+10) TESTIMONIALS (206)
+11) PRICING (224)
+    - Price (238)
+12) CALL TO ACTION (244)
+13) TEAM (257)
+14) CONTACT (286)
+    - Icon Toggle (289)
+    - Fonts and Fields (297)
+15) FOOTER (311)
+    - Social Buttons (323)
+16) COPYRIGHT (329)
+    - Button Go Top (339)
+17) MODALS (351)
+-----------------------------------------------------------------------------------------------*/
+
+body {
+  color: #777;
+  background-color: #fff;
+}
+
+/***********************************************************************************************
+ 1) PRELOADER
+ ***********************************************************************************************/
+
+#preloader { background-color: #fff; }
+#status { background: url(../../images/loading_light.gif) no-repeat center center; }
+
+
+/***********************************************************************************************
+ 2) NAVBAR - NAVBAR TOGGLE
+ ***********************************************************************************************/
+
+.navbar-default { box-shadow: 0 1px 0 0 #ececec; }
+.navbar-default,
+.navbar-collapse { background-color: #fcfcfc; }
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-nav>li>a:hover,
+.navbar-nav>.active>a { background-color: #f2f2f2; }
+.navbar-nav { box-shadow: 0 1px 0 0 #ececec; }
+
+/* Logo .......................................................................................*/
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus { color: #777; }
+
+/* Toggle .....................................................................................*/
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { background-color: #f2f2f2; }
+.navbar-default .navbar-toggle .icon-bar { background-color: #777; }
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form { box-shadow: 0 -1px 0 0 #ececec; }
+
+/* Media Queries - Toggle .....................................................................*/
+@media (min-width: 768px) {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form { box-shadow: none; }
+}
+
+
+/***********************************************************************************************
+ 3) SECTIONS
+ ***********************************************************************************************/
+
+.overview,
+.testimonials,
+.team {
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  background-color: #f5f5f5;
+}
+
+
+/***********************************************************************************************
+ 4) HEADERS - Sections
+ ***********************************************************************************************/
+
+.section-title,
+.section-subtitle { color: #999; }
+
+
+/***********************************************************************************************
+ 5) SLIDESHOW
+ ***********************************************************************************************/
+
+.slideshow .panel-subscription { background-color: rgba(255, 255, 255, 0.7); }
+.slideshow .panel-subscription .panel-heading {
+  color: #777;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.slideshow .form-control {
+  border: 1px solid #ccc;
+  box-shadow: none;
+}
+
+.slideshow .slide-form .panel .btn { box-shadow: 0 0 0 7px rgba(255,255,255,.4); }
+
+/***********************************************************************************************
+ 6) FEATURES
+ ***********************************************************************************************/
+
+/* Icons ......................................................................................*/
+.features .features-icon {
+  background-color: #f9f9f9;
+  box-shadow: 0 0 0 1px #aaa;
+}
+.features .features-wrapper:hover .features-icon { box-shadow: 0 0 0 1px #888; }
+.features .features-icon:after { box-shadow: 0 0 0 4px #aaa; }
+
+
+/***********************************************************************************************
+ 7) OVERVIEW
+ ***********************************************************************************************/
+
+/* Tabs .......................................................................................*/
+.nav-tabs>li>a { color: #777; }
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:focus {
+  border-color: transparent transparent transparent;
+  background-color: #eee;
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  color: #777;
+  background-color: #ddd;
+}
+.nav-tabs.nav-justified>.active>a,
+.nav-tabs.nav-justified>.active>a:hover,
+.nav-tabs.nav-justified>.active>a:focus { border: 1px solid #ddd; }
+
+/* Media Queries - Tabs .......................................................................*/
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified>li>a {
+    border-bottom: 1px solid #ddd;
+    color: #777;
+  }
+}
+
+/* Subtitles ..................................................................................*/
+.overview .subtitle { color: #bbb; }
+
+/* Icons ......................................................................................*/
+.overview .overview-icon { box-shadow: 0 0 0 1px #aaa; }
+.overview .overview-wrapper:hover .overview-icon { box-shadow: 0 0 0 1px #888; }
+.overview .overview-icon:after { box-shadow: 0 0 0 4px #aaa; }
+
+/* Progress Bars ..............................................................................*/
+.progress { background-color: #ddd; }
+
+
+/***********************************************************************************************
+ 8) STATS
+ ***********************************************************************************************/
+
+path { stroke: #fff; }
+.circles-text,
+.stats .description { color: #fff; }
+
+.stats .circle .circles-text { box-shadow: 0 0 0 9px rgba(255,255,255,.1); }
+}
+
+
+/***********************************************************************************************
+ 9) GALLERY
+ ***********************************************************************************************/
+
+.gallery .slick-prev:before,
+.gallery .slick-next:before { color: #bbb; }
+
+
+/***********************************************************************************************
+ 10) TESTIMONIALS
+ ***********************************************************************************************/
+
+.testimonials .testimonials-photo { box-shadow: 0 0 0 2px #aaa; }
+.testimonials .testimonials-controls:hover + .carousel-inner .testimonials-photo { box-shadow: 0 0 0 1px #f5f5f5; }
+.testimonials .testimonials-photo:before { box-shadow: 0 0 0 4px #aaa; }
+.testimonials .testimonials-photo:after { background-color: rgba(255,255,255,0.15); }
+
+.testimonials .carousel.fade blockquote {
+  color: #777;
+  background-color: rgba(0,0,0,.06);
+}
+.testimonials .carousel.fade blockquote:before {
+  border-bottom: 25px solid rgba(0,0,0,.06);
+}
+
+
+/***********************************************************************************************
+ 11) PRICING
+ ***********************************************************************************************/
+
+.pricing .panel { background-color: #f5f5f5; }
+.pricing .panel-default>.panel-heading,
+.pricing .panel-footer {
+  color: #777;
+  background-color: #ddd;
+}
+.pricing .plan-features li {
+  border-bottom: 1px solid #ddd;
+  color: #777;
+}
+
+/* Price ......................................................................................*/
+.plan-price { box-shadow: 0 0 0 2px #f5f5f5; }
+.plan-price:after { box-shadow: 0 0 0 4px #a5a5a5; }
+
+
+/***********************************************************************************************
+ 12) CALL TO ACTION
+ ***********************************************************************************************/
+
+.calltoaction .c1 h3 { color: #ddd; }
+.dropdown-menu { background-color: #999; }
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus { background-color: #888; }
+
+.calltoaction .download-buttons .btn,
+.calltoaction .input-newsletter { box-shadow: 0 0 0 7px rgba(255,255,255,.1); }
+
+
+/***********************************************************************************************
+ 13) TEAM
+ ***********************************************************************************************/
+
+.team .team-photo {
+  border: 3px solid #f5f5f5;
+  box-shadow: inset 0 0 0 2px #c7c7c7;
+  background-color: #f5f5f5;
+}
+.team .team-wrapper:hover .team-photo { box-shadow: 0 0 0 1px #f5f5f5; }
+.team .team-photo:before { box-shadow: 0 0 0 4px #bbb; }
+.team .team-wrapper:hover .team-photo:after { box-shadow: 0 0 0 3px #f5f5f5; }
+.team .team-photo:after { background-color: rgba(255,255,255,.15); }
+
+.team .team-wrapper { background-color: rgba(0,0,0,.05); }
+.team .team-content .description { color: #777; }
+
+.team .team-media .team-social {
+  color: #777;
+  background-color: rgba(0,0,0,.05);
+}
+.team .team-media .team-social:hover { color: #aaa; }
+.team .team-media .team-social + .tooltip .tooltip-arrow { border-bottom-color: rgba(0,0,0,.07); }
+.team .team-media .team-social + .tooltip .tooltip-inner {
+  color: #777;
+  background-color: rgba(0,0,0,.07);
+}
+
+
+/***********************************************************************************************
+ 14) CONTACT
+ ***********************************************************************************************/
+
+/* Icon Toggle ................................................................................*/
+.contact .map-title {
+  border: 3px solid #fff;
+  box-shadow: inset 0 0 0 1px #999;
+  background-color: #fff;
+}
+.contact .map-title:hover { box-shadow: 0 0 0 1px #fff; }
+
+/* Fonts and Fields ...........................................................................*/
+.contact .vcard { color: #777; }
+.form-control {
+  border: 1px solid #ddd;
+  color: #777;
+  background-color: #fcfcfc;
+}
+.form-control:focus {
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+
+/***********************************************************************************************
+ 15) FOOTER
+ ***********************************************************************************************/
+
+.footer-logo {
+  border: 5px solid #fff;
+  color: #777;
+  background-color: #fff;
+  box-shadow:  0 0 0 7px #fff;
+}
+.footer-logo:before { box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
+.footer-logo:after { box-shadow: 0 0 0 4px rgba(0,0,0,.15); }
+
+/* Social Buttons .............................................................................*/
+.social-icons .btn-social { background-color: rgba(0,0,0,.12); }
+.social-icons .email:hover { background-color: #ddd; }
+
+
+/***********************************************************************************************
+ 16) COPYRIGHT
+ ***********************************************************************************************/
+
+.copyright {
+  color: #777;
+  background-color: #eee;
+  box-shadow: inset 0 -41px 0 0 rgba(0,0,0,.12);
+}
+.copyright a { color: #555; }
+
+/* Button Go Top ..............................................................................*/
+.go-top {
+  background-color: #ddd;
+  background-color: rgba(0,0,0,.2);
+}
+.go-top:hover {
+  background-color: #ccc;
+  background-color: rgba(0,0,0,.3);
+}
+
+
+/***********************************************************************************************
+ 17) MODALS
+ ***********************************************************************************************/
+
+.modal-content { background-color: #f5f5f5; }
+.modal-header, .modal-footer {
+  color: #777;
+  background-color: #ddd;
+}
+.modal-header { border-bottom: 1px solid #d7d7d7; }
+.modal-footer { border-top: 1px solid #d7d7d7; }
+
+.modal .close { color: #888; }
