@@ -39,14 +39,23 @@
                         <hr ng-if="mCtrl.car.recalls.Count != 0">
 
                         <accordion close-others="oneAtATime">
-                            <accordion-group ng-repeat="result in mCtrl.car.recalls.Results" heading="Recall" class="btn-sm">
-                                <h4 class="description"> <span class="coder_orange">Component:</span> {{result.Component}}</h4>
+                            <accordion-group ng-repeat="result in mCtrl.car.recalls.Results" heading="{{result.Component}}" class="btn-sm">
+                                
                                 <h4 class="description"> <span class="coder_orange">Summary:</span></h4>
                                 <p class="description">{{result.Summary}}</p>
+                                <hr />
+                                <h4 class="description"> <span class="coder_orange">Consequence:</span></h4>
+                                <p class="description">{{result.Conequence}}</p>
+                                <hr />
+                                <h4 class="description"> <span class="coder_orange">Remedy:</span></h4>
+                                <p class="description">{{result.Remedy}}</p>
+                                <hr />
+                                <h4 class="description"> <span class="coder_orange">Notes:</span></h4>
+                                <p class="description">{{result.Notes}}</p>
+                                <hr />
                                 <h4 class="description"> <span class="coder_orange">Manufacturer:</span> {{result.Manufacturer}}</h4>
                                 <h4 class="description"> <span class="coder_orange">NHTSA Campaign Number:</span> {{result.NHTSACampaignNumber}}</h4>
                                 <h4 class="description"> <span class="coder_orange">Report Received Date:</span> {{result.ReportReceivedDate}}</h4>
-                                <hr />
                             </accordion-group>
                         </accordion>
                      

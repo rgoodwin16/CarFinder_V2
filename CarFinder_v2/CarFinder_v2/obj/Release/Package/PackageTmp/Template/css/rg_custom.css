@@ -62,12 +62,12 @@
 .modal-content {
     background-color: #484c53;
     margin:auto;
-    min-width:200px;
-    max-width:500px;
+    min-width:530px;
+    max-width:50%;
     overflow:auto;
     position:relative;
     margin-top:300px;
-    margin-bottom:300px;
+    
 
 
 }
