@@ -47,3 +47,74 @@
 .section-subtitle::after {
     color:#FF931E;
 }
+
+.clickable {
+    cursor:pointer;
+}
+
+.hold_on {
+    position:absolute;
+}
+
+.stay_put {
+    position:fixed;
+}
+.modal-content {
+    background-color: #484c53;
+    margin:auto;
+    min-width:200px;
+    max-width:500px;
+    overflow:auto;
+    position:relative;
+    margin-top:300px;
+    margin-bottom:300px;
+
+
+}
+
+.p_top {
+    padding-top:3em;
+    padding-bottom:2em;
+}
+
+.nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+    
+}
+
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified > li > a {
+    border: 1px solid #FF931E;
+    border-radius: 0 0 0 0;
+  }
+  .nav-tabs.nav-justified > .active > a,
+  .nav-tabs.nav-justified > .active > a:hover,
+  .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #FF931E;
+  }
+}
+
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
+     border-bottom: 1px solid #FF931E;
+     border-radius: 0 0 0 0;
+}
+
+.car_details {
+    background-color: #484C53;
+}
+
+body.btn-circle .btn {
+    border-radius: 5px;
+}
+
+.btn_coder_orange{
+    background-color:#FF931E;
+}
+
+hr {
+    margin-top: 21px;
+    margin-bottom: 21px;
+    border: 0;
+    border-top: 1px solid #FF931E;
+}

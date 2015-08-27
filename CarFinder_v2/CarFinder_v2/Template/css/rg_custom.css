@@ -62,11 +62,12 @@
 .modal-content {
     background-color: #484c53;
     margin:auto;
-    min-width:15%;
+    min-width:240px;
     max-width:50%;
     overflow:auto;
     position:relative;
-    margin-top:12em;
+    margin-top:300px;
+    
 
 
 }
@@ -84,18 +85,18 @@
 
 @media (min-width: 768px) {
   .nav-tabs.nav-justified > li > a {
-    border: 1px solid #4e5d6c;
+    border: 1px solid #FF931E;
     border-radius: 0 0 0 0;
   }
   .nav-tabs.nav-justified > .active > a,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #4e5d6c;
+    border-bottom-color: #FF931E;
   }
 }
 
 .nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
-     border-bottom: 1px solid #4e5d6c;
+     border-bottom: 1px solid #FF931E;
      border-radius: 0 0 0 0;
 }
 
@@ -109,4 +110,11 @@ body.btn-circle .btn {
 
 .btn_coder_orange{
     background-color:#FF931E;
+}
+
+hr {
+    margin-top: 21px;
+    margin-bottom: 21px;
+    border: 0;
+    border-top: 1px solid #FF931E;
 }

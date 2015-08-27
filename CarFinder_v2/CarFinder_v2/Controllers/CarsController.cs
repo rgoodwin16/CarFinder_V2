@@ -100,7 +100,7 @@ namespace CarFinder_v2.Controllers
                 null,
                 null,
                 null,
-                null,
+                 "Size:Large+Aspect:Wide",
                 null,
                 null,
                 null,

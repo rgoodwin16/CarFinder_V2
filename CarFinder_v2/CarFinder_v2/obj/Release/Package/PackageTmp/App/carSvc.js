@@ -33,6 +33,12 @@
             })
         }
 
+        f.getCar = function (id) {
+            return $http.post('api/cars/getCar',id ).then(function (response) {
+                return response.data
+            })
+        }
+
         return f;
     }]);
 })();

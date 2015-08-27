@@ -84,6 +84,9 @@
     <!-- RG Custom CSS -->
     <link href="Template/css/rg_custom.css" rel="stylesheet" />
 
+    <!-- trNgGrid -->
+    <link href="Content/trNgGrid.min.css" rel="stylesheet" />
+
     <!-- Google Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 
@@ -137,7 +140,9 @@
                 <div class="container-fluid">
                     <!-- Brand and Toggle -->
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                        <button type="button" class="navbar-toggle"
+                                ng-init="navCollapsed = true"
+                                ng-click="navCollapsed = !navCollapsed">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -147,19 +152,19 @@
                     </div>
                     <!-- End Brand and Toggle -->
                     <!-- Menu -->
-                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
                         <ul class="nav navbar-nav">
-                            <li class="active" data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <li class="active">
                                 <a href="#anch-top">Home</a>
                             </li>
-                            <li data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <li>
                                 <a href="#anch-features">Features</a>
                             </li>
-                            <li data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <li>
                                 <a href="#anch-overview">Get Started</a>
                             </li>
 
-                            <li data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <li>
                                 <a href="#anch-contact">Contact</a>
                             </li>
                         </ul>
@@ -186,7 +191,36 @@
                     <!-- Section Content -->
                     <div class="r1 row">
                         <!-- Block 1 -->
+                        
                         <div class="c1 col-sm-6 col-md-4">
+                            <div class="features-wrapper">
+                                <div class="features-icon">
+                                    <span class="fa fa-desktop"></span>
+                                </div>
+                                <div class="features-content">
+                                    <h3 class="title">Crossbrowser Compatible</h3>
+                                    <p class="description"></p>
+                                </div>
+                            </div>
+                        </div><!-- /cross browser -->
+                        
+
+                        <!-- End Block 1 -->
+                        <!-- Block 2 -->
+                        <div class="c2 col-sm-6 col-md-4">
+                            <div class="features-wrapper">
+                                <div class="features-icon">
+                                    <span class="fa fa-mobile"></span>
+                                </div>
+                                <div class="features-content">
+                                    <h3 class="title">Fully Responsive</h3>
+                                    <p class="description"></p>
+                                </div>
+                            </div>
+                        </div><!-- /responsive -->
+                        <!-- End Block 2 -->
+                        <!-- Block 3 -->
+                        <div class="c3 col-sm-6 col-md-4">
                             <div class="features-wrapper">
                                 <div class="features-icon">
                                     <span class="icon-AngularJS-Shield-large"></span>
@@ -196,33 +230,7 @@
                                     <p class="description"></p>
                                 </div>
                             </div>
-                        </div>
-                        <!-- End Block 1 -->
-                        <!-- Block 2 -->
-                        <div class="c2 col-sm-6 col-md-4">
-                            <div class="features-wrapper">
-                                <div class="features-icon">
-                                    <span class="icon_map_alt"></span>
-                                </div>
-                                <div class="features-content">
-                                    <h3 class="title">Fully Responsive</h3>
-                                    <p class="description"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Block 2 -->
-                        <!-- Block 3 -->
-                        <div class="c3 col-sm-6 col-md-4">
-                            <div class="features-wrapper">
-                                <div class="features-icon">
-                                    <span class="ion-android-globe"></span>
-                                </div>
-                                <div class="features-content">
-                                    <h3 class="title">Crossbrowser Compatible</h3>
-                                    <p class="description"></p>
-                                </div>
-                            </div>
-                        </div>
+                        </div><!-- /angular -->
                         <!-- End Block 3 -->
 
                     </div>
@@ -265,28 +273,21 @@
                         </div>
                         <br />
                         <div class="r1 row">
-                            <table class="table table-hover table-responsive table-striped">
+
+                            <table tr-ng-grid="" items="ctl.cars" page-items="10">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
-                                        <th>Year</th>
-                                        <th>Make</th>
-                                        <th>Model</th>
-                                        <th>Trim</th>
-                                        <th>Body Style</th>
-                                        <th>Action</th>
-
+                                        <th field-name="model_year" enable-sorting="false" display-name="Year" display-align="center" enable-filtering="false"></th>
+                                        <th field-name="make" display-align="center" enable-filtering="false"></th>
+                                        <th field-name="model_name" display-align="center" enable-filtering="false"></th>
+                                        <th field-name="model_trim" display-name="Trim" display-align="center" enable-filtering="false"></th>
+                                        <th field-name="body_style" display-name="Body Style" display-align="center" enable-filtering="false"></th>
+                                        <th display-name="Action" enable-sorting="false" display-align="center" enable-filtering="false"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="car in ctl.cars">
-                                        <td>{{car.id}}</td>
-                                        <td>{{car.model_year}}</td>
-                                        <td>{{car.make}}</td>
-                                        <td>{{car.model_name}}</td>
-                                        <td>{{car.model_trim}}</td>
-                                        <td>{{car.body_style}}</td>
-                                        <td class="clickable" ng-click="ctl.getCar(car.id)">View</td>
+                                    <tr>
+                                        <td><button type="button" class="btn btn-default" ng-click="ctl.getCar(gridItem.id)">View</button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -395,8 +396,11 @@
 
     <!-- Angular -->
     <script src="Scripts/angular.min.js"></script>
+
     <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="Scripts/trNgGrid.min.js"></script>
 
     <!-- Custom Angular App -->
     <script src="App/app.js"></script>
@@ -404,6 +408,8 @@
     <script src="App/carSvc.js"></script>
 
     <script src="App/carController.js"></script>
+    
+
 
     <!-- Bootstrap 3.3.5 -->
     <!-- Retina Graphics -->

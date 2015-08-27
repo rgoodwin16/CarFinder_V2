@@ -49,7 +49,8 @@
     <link rel="shortcut icon" href="Template/images/favicons/cf_favicon.ico">
 
     <!-- Bootstrap 3.3.5 -->
-    <link href="Template/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="Template/css/bootstrap.css" rel="stylesheet" />
 
     <!--=== FONT ICONS ===-->
     <!-- Font Awesome 4.3.0 -->
@@ -83,11 +84,11 @@
     <!-- RG Custom CSS -->
     <link href="Template/css/rg_custom.css" rel="stylesheet" />
 
+    <!-- trNgGrid -->
+    <link href="Content/trNgGrid.min.css" rel="stylesheet" />
+
     <!-- Google Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-
-    <!--<link rel="stylesheet" href="https://i.icomoon.io/public/temp/2ebe7a5791/UntitledProject/style.css">-->
-   
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -98,11 +99,13 @@
     <!--[if gt IE 8]>
         <link href="css/ie9.min.css" rel="stylesheet">
       <![endif]-->
+
+    <!-- Modernizr -->
     <script src="Scripts/modernizr-2.8.3.js"></script>
     
 </head>
 
-<body class="btn-circle sld-transition-2" id="anch-top" data-spy="scroll" data-target=".navbar" >
+<body class="btn-circle sld-transition-2" id="anch-top" data-spy="scroll" data-target=".navbar" ng-app="car-finder">
 
     <!-- Preloader -->
     <div class="preloader">
@@ -110,7 +113,7 @@
     </div>
     <!-- End Preloader -->
     <!-- LAYOUT -->
-    <div class="layout">
+    <div class="layout" ng-controller="carController as ctl">
 
         <!-- HEADER -->
         <header>
@@ -120,77 +123,26 @@
                 <div class="container-fluid">
                     <div class="r1 row">
                         <div class="c1 col-md-12">
-                            <div class="carousel slide" id="slideshow-carousel-1" data-ride="carousel">
+                            
+                            <carousel class="carousel slide" interval="ctl.myInterval" no-wrap="ctl.noWrapSlides">
+                                <slide active="slide.active" class="carousel-inner" ng-repeat="slide in ctl.slides">
+                                    <img ng-src="{{slide.image}}" style="margin:auto;" />
+                                </slide>
+                            </carousel>
 
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li class="active" data-target="#slideshow-carousel-1" data-slide-to="0"></li>
-                                    <li data-target="#slideshow-carousel-1" data-slide-to="1"></li>
-                                    <li data-target="#slideshow-carousel-1" data-slide-to="2"></li>
-
-                                </ol>
-                                <!-- End Indicators -->
-                                <!-- Wrapper for Slides -->
-                                <div class="carousel-inner">
-
-                                    <!-- Slide 1 -->
-                                    <div class="item item-1 slide-text active">
-                                        <img class="img-responsive bg-item parallax" data-speed="1" src="Template/images/slideshow/Car_Reliable.jpg" alt="Slide 1 Background">
-                                        <div class="carousel-caption">
-                                            <h2 class="title"><br><small class="brand"></small></h2>
-
-                                        </div>
-                                    </div>
-                                    <!-- End Slide 1 -->
-                                    <!-- Slide 2 -->
-                                    <div class="item item-2 slide-form">
-                                        <img class="img-responsive bg-item parallax" data-speed="1" src="Template/images/slideshow/Car_Fast.png" alt="Slide 2 Background">
-                                        <div class="carousel-caption">
-                                            <div class="c2 col-xs-12 col-sm-12 col-md-6">
-                                                <h2 class="title"><br><small class="brand"></small></h2>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <!-- End Slide 2 -->
-                                    <!-- Slide 3 -->
-                                    <div class="item item-3 slide-image">
-                                        <img class="img-responsive bg-item parallax" data-speed="1" src="Template/images/slideshow/Car_Strong.jpg" alt="Slide 3 Background">
-                                        <div class="carousel-caption">
-
-                                            <div class="c5 col-xs-12 col-sm-7 col-md-7">
-                                                <h2 class="title"><br><small class="brand"></small></h2>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Slide 3 -->
-
-
-                                </div>
-                                <!-- End Wrapper for Slides -->
-                                <!-- Controls -->
-                                <a class="left carousel-control" data-slide="prev" href="#slideshow-carousel-1">
-                                    <span class="fa fa-angle-left"></span>
-                                </a>
-                                <a class="right carousel-control" data-slide="next" href="#slideshow-carousel-1">
-                                    <span class="fa fa-angle-right"></span>
-                                </a>
-                                <!-- End Controls -->
-
-                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- END SLIDESHOW -->
             <!-- NAVBAR -->
-            <nav class="navbar navbar-default" role="navigation">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:46px; position:fixed;">
                 <div class="container-fluid">
                     <!-- Brand and Toggle -->
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                        <button type="button" class="navbar-toggle"
+                                ng-init="navCollapsed = true"
+                                ng-click="navCollapsed = !navCollapsed">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -200,19 +152,19 @@
                     </div>
                     <!-- End Brand and Toggle -->
                     <!-- Menu -->
-                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
                         <ul class="nav navbar-nav">
-                            <li class="active" data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <li class="active">
                                 <a href="#anch-top">Home</a>
                             </li>
-                            <li data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <li>
                                 <a href="#anch-features">Features</a>
                             </li>
-                            <li data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <li>
                                 <a href="#anch-overview">Get Started</a>
                             </li>
 
-                            <li data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <li>
                                 <a href="#anch-contact">Contact</a>
                             </li>
                         </ul>
@@ -239,57 +191,48 @@
                     <!-- Section Content -->
                     <div class="r1 row">
                         <!-- Block 1 -->
-                        <div class="c1 col-sm-6 col-md-3">
+                        
+                        <div class="c1 col-sm-6 col-md-4">
+                            <div class="features-wrapper">
+                                <div class="features-icon">
+                                    <span class="fa fa-desktop"></span>
+                                </div>
+                                <div class="features-content">
+                                    <h3 class="title">Crossbrowser Compatible</h3>
+                                    <p class="description"></p>
+                                </div>
+                            </div>
+                        </div><!-- /cross browser -->
+                        
+
+                        <!-- End Block 1 -->
+                        <!-- Block 2 -->
+                        <div class="c2 col-sm-6 col-md-4">
+                            <div class="features-wrapper">
+                                <div class="features-icon">
+                                    <span class="fa fa-mobile"></span>
+                                </div>
+                                <div class="features-content">
+                                    <h3 class="title">Fully Responsive</h3>
+                                    <p class="description"></p>
+                                </div>
+                            </div>
+                        </div><!-- /responsive -->
+                        <!-- End Block 2 -->
+                        <!-- Block 3 -->
+                        <div class="c3 col-sm-6 col-md-4">
                             <div class="features-wrapper">
                                 <div class="features-icon">
                                     <span class="icon-AngularJS-Shield-large"></span>
                                 </div>
                                 <div class="features-content">
-                                    <h3 class="title">Clean & Simple Design</h3>
-                                    <p class="description">Lorem ipsum consectetur ultrices ac facilisis est neque fames, eget vel libero egestas viverra lacinia facilisis, augue dictum curabitur inceptos potenti justo fusce.</p>
+                                    <h3 class="title">Powered by AngularJS</h3>
+                                    <p class="description"></p>
                                 </div>
                             </div>
-                        </div>
-                        <!-- End Block 1 -->
-                        <!-- Block 2 -->
-                        <div class="c2 col-sm-6 col-md-3">
-                            <div class="features-wrapper">
-                                <div class="features-icon">
-                                    <span class="icon_map_alt"></span>
-                                </div>
-                                <div class="features-content">
-                                    <h3 class="title">Fully Responsive</h3>
-                                    <p class="description">Lorem ipsum consectetur ultrices ac facilisis est neque fames, eget vel libero egestas viverra lacinia facilisis, augue dictum curabitur inceptos potenti justo fusce.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Block 2 -->
-                        <!-- Block 3 -->
-                        <div class="c3 col-sm-6 col-md-3">
-                            <div class="features-wrapper">
-                                <div class="features-icon">
-                                    <span class="ion-android-globe"></span>
-                                </div>
-                                <div class="features-content">
-                                    <h3 class="title">Crossbrowser Compatible</h3>
-                                    <p class="description">Lorem ipsum consectetur ultrices ac facilisis est neque fames, eget vel libero egestas viverra lacinia facilisis, augue dictum curabitur inceptos potenti justo fusce.</p>
-                                </div>
-                            </div>
-                        </div>
+                        </div><!-- /angular -->
                         <!-- End Block 3 -->
-                        <!-- Block 4 -->
-                        <div class="c4 col-sm-6 col-md-3">
-                            <div class="features-wrapper">
-                                <div class="features-icon">
-                                    <span class="icon_gift_alt"></span>
-                                </div>
-                                <div class="features-content">
-                                    <h3 class="title">Over 1870 Font Icons</h3>
-                                    <p class="description">Lorem ipsum consectetur ultrices ac facilisis est neque fames, eget vel libero egestas viverra lacinia facilisis, augue dictum curabitur inceptos potenti justo fusce.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Block 4 -->
+
                     </div>
                     <!-- End Section Content -->
                 </div>
@@ -297,15 +240,15 @@
             <!-- END FEATURES -->
             <!-- OVERVIEW -->
             <section class="overview" id="anch-overview">
-                <div class="container" ng-app="car-finder">
+                <div class="container">
                     <!-- Section Header -->
                     <div class="section-header">
                         <h2 class="section-title">Get Started</h2>
-                        <h3 class="section-subtitle">Lorem ipsum per fames turpis tempor elementum felis venenatis, odio vivamus sagittis massa platea</h3>
+                        <h3 class="section-subtitle">Start by selecting a year, then a make, followed by a model.  Finally select a trim and the table below will display your car.</h3>
                     </div>
                     <!-- End Section Header -->
                     <!-- Section Content -->
-                    <div ng-controller="carController as ctl">
+                    <div>
                         <div class="r1 row">
                             <div class="col-md-3">
                                 <h4 class="coder_orange"> Select Year:</h4>
@@ -330,30 +273,26 @@
                         </div>
                         <br />
                         <div class="r1 row">
-                            <table class="table table-hover table-responsive table-striped">
+
+                            <table tr-ng-grid="" items="ctl.cars" page-items="10">
                                 <thead>
                                     <tr>
-                                        <th>Year</th>
-                                        <th>Make</th>
-                                        <th>Model</th>
-                                        <th>Trim</th>
-                                        <th>Body Style</th>
-                                        <th>Engine Fuel</th>
-                                        <th>Fuel Capacity(Gallons | Liters)</th>
+                                        <th field-name="model_year" enable-sorting="false" display-name="Year" display-align="center" enable-filtering="false"></th>
+                                        <th field-name="make" display-align="center" enable-filtering="false"></th>
+                                        <th field-name="model_name" display-align="center" enable-filtering="false"></th>
+                                        <th field-name="model_trim" display-name="Trim" display-align="center" enable-filtering="false"></th>
+                                        <th field-name="body_style" display-name="Body Style" display-align="center" enable-filtering="false"></th>
+                                        <th display-name="Action" enable-sorting="false" display-align="center" enable-filtering="false"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="car in ctl.cars">
-                                        <td>{{car.model_year}}</td>
-                                        <td>{{car.make}}</td>
-                                        <td>{{car.model_name}}</td>
-                                        <td>{{car.model_trim}}</td>
-                                        <td>{{car.body_style}}</td>
-                                        <td>{{car.engine_fuel}}</td>
-                                        <td>{{car.fuel_capacity_l * .264172}} | {{car.fuel_capacity_l}}</td>
+                                    <tr>
+                                        <td><button type="button" class="btn btn-default" ng-click="ctl.getCar(gridItem.id)">View</button></td>
                                     </tr>
                                 </tbody>
                             </table>
+
+
                         </div>
 
                     </div>
@@ -368,7 +307,7 @@
                     <!-- Section Header -->
                     <div class="section-header">
                         <h2 class="section-title">Contact</h2>
-                        <h3 class="section-subtitle">Lorem ipsum per fames turpis tempor elementum felis venenatis, odio vivamus sagittis massa platea</h3>
+                        <h3 class="section-subtitle">Want to get in touch with me?</h3>
                     </div>
                     <!-- End Section Header -->
                     <!-- Section Content -->
@@ -428,8 +367,8 @@
                         <section class="social-icons">
                             <h3 class="hide">Social Buttons</h3>
                             <h3>Contact Me:</h3>
-                            <a class="btn-social social_hover" href="https://www.linkedin.com/pub/ray-goodwin/102/426/305" title=""><span class="fa fa-github"></span></a>
-                            <a class="btn-social social_hover" href="https://github.com/rgoodwin16" title=""><span class="fa fa-linkedin"></span></a>
+                            <a class="btn-social social_hover" href="https://www.linkedin.com/pub/ray-goodwin/102/426/305" title=""><span class="fa fa-linkedin"></span></a>
+                            <a class="btn-social social_hover" href="https://github.com/rgoodwin16" title=""><span class="fa fa-github"></span></a>
 
                         </section>
                         <!-- End Social Buttons -->
@@ -451,72 +390,28 @@
         <a class="go-top" href="#anch-top"><span class="fa fa-chevron-up"></span></a>
 
     </div>
-    <!-- END LAYOUT -->
-    <!-- MODALS -->
-    <!-- Modal - Slideshow - Slide Form -->
-    <div class="modal fade" id="modal-slide-form" tabindex="-1" role="dialog" aria-labelledby="title-modal-slide-form" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title text-center" id="title-modal-slide-form">Start your FREE trial</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="alerts alerts-trial-modal"></div>
-                    <!-- Modal Subscription form -->
-                    <div class="form-horizontal modal-trial-form" role="form">
-                        <fieldset>
-                            <div class="form-group">
-                                <input class="form-control" id="modal-trial-name" name="modal-trial-name" type="text" placeholder="Name *" required>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" id="modal-trial-email" name="modal-trial-email" type="email" placeholder="Email *" required>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" id="modal-trial-phone" name="modal-trial-phone" type="tel" placeholder="Phone">
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-lg btn-block btn-danger btn-submit submit-modal-form-trial" type="submit">Get Your Free Trial</button>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <!-- End Modal Subscription form -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal - Slideshow - Slide Video -->
-    <div class="modal fade" id="modal-slide-video" tabindex="-1" role="dialog" aria-labelledby="title-modal-slide-video" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title text-center" id="title-modal-slide-video">Video Demo</h4>
-                </div>
-                <div class="modal-body">
-                    <!-- 4:3 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-4by3">
-                        <!--<iframe class="embed-responsive-item" src="//www.youtube-nocookie.com/embed/ct7E31Pcbso?controls=0&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;iv_load_policy=3" allowfullscreen></iframe>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- jQuery -->
     <script src="Scripts/jquery-2.1.4.min.js"></script>
 
+    <!-- Angular -->
+    <script src="Scripts/angular.min.js"></script>
+
+    <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="Scripts/trNgGrid.min.js"></script>
+
+    <!-- Custom Angular App -->
+    <script src="App/app.js"></script>
+
+    <script src="App/carSvc.js"></script>
+
+    <script src="App/carController.js"></script>
+    
 
 
     <!-- Bootstrap 3.3.5 -->
-
-    <script src="Scripts/bootstrap.min.js"></script>
-
     <!-- Retina Graphics -->
     <script src="Template/js/vendor/retina.min.js"></script>
 
@@ -547,19 +442,11 @@
 
     <!-- Default General Settings -->
     <script src="Template/js/main.js"></script>
-    
-    <!-- Angular -->
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
-    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
 
 
-    <!-- Custom Angular App -->
-    <script src="App/app.js"></script>
-
-    <script src="App/carSvc.js"></script>
-
-    <script src="App/carController.js"></script>
 </body>
 
 </html>
+
+
+

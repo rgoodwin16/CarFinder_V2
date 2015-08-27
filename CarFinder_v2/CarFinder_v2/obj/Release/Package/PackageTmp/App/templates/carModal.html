@@ -32,24 +32,23 @@
                 <div class="row">
                     <div class="col-xs-12 car_details">
                         <h3 class="description" ng-if="mCtrl.car.recalls.Count == 0">{{mCtrl.car.recalls.Message}}</h3>
-                                             
+                        
+                        
 
                         <h3 class="title coder_orange" ng-if="mCtrl.car.recalls.Count != 0">Recal Count: <span style="color:white;">{{mCtrl.car.recalls.Count}}</span></h3>
                         
                         <hr ng-if="mCtrl.car.recalls.Count != 0">
 
-                        <accordion close-others="oneAtATime">
-                            <accordion-group ng-repeat="result in mCtrl.car.recalls.Results" heading="Recall" class="btn-sm">
-                                <h4 class="description"> <span class="coder_orange">Component:</span> {{result.Component}}</h4>
-                                <h4 class="description"> <span class="coder_orange">Summary:</span></h4>
-                                <p class="description">{{result.Summary}}</p>
-                                <h4 class="description"> <span class="coder_orange">Manufacturer:</span> {{result.Manufacturer}}</h4>
-                                <h4 class="description"> <span class="coder_orange">NHTSA Campaign Number:</span> {{result.NHTSACampaignNumber}}</h4>
-                                <h4 class="description"> <span class="coder_orange">Report Received Date:</span> {{result.ReportReceivedDate}}</h4>
-                                <hr />
-                            </accordion-group>
-                        </accordion>
-                     
+                        <div ng-repeat="result in mCtrl.car.recalls.Results">
+                            <h4 class="description"> <span class="coder_orange">Component:</span> {{result.Component}}</h4>
+                            <h4 class="description"> <span class="coder_orange">Summary:</span></h4>
+                            <p class="description">{{result.Summary}}</p>
+                            <h4 class="description"> <span class="coder_orange">Manufacturer:</span> {{result.Manufacturer}}</h4>
+                            <h4 class="description"> <span class="coder_orange">NHTSA Campaign Number:</span> {{result.NHTSACampaignNumber}}</h4>
+                            <h4 class="description"> <span class="coder_orange">Report Received Date:</span> {{result.ReportReceivedDate}}</h4>
+                            <hr />
+
+                        </div>
                     </div>
                 </div>
 

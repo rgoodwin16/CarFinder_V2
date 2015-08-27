@@ -237,6 +237,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\ionicons.svg" />
+    <Content Include="Content\trNgGrid.min.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -1092,6 +1093,7 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\trNgGrid.min.js" />
     <Content Include="Template\assets\elegant-icons\css\elegant-icons.css" />
     <Content Include="Template\assets\elegant-icons\css\elegant-icons.min.css" />
     <Content Include="Template\assets\elegant-icons\css\index.html" />

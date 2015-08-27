@@ -34,6 +34,14 @@
         }
 
         this.getMakes = function () {
+            self.selected.make = '';
+            self.selected.model = '';
+            self.selected.trim = '';
+
+            self.options.makes = '';
+            self.options.models = '';
+            self.options.trims = '';
+
             self.getCars()
             carSvc.getMakes(self.selected.year).then(function (data) {
                 self.options.makes = data;
@@ -41,6 +49,12 @@
         }
 
         this.getModels = function () {
+            self.selected.model = '';
+            self.selected.trim = '';
+
+            self.options.models = '';
+            self.options.trims = '';
+
             self.getCars()
             carSvc.getModels(self.selected.year, self.selected.make).then(function (data) {
                 self.options.models = data;
@@ -48,6 +62,10 @@
         }
 
         this.getTrims = function () {
+            self.selected.trim = '';
+            self.options.trims = '';
+
+
             self.getCars()
             carSvc.getTrims(self.selected.year, self.selected.make, self.selected.model).then(function (data) {
                 self.options.trims = data;
