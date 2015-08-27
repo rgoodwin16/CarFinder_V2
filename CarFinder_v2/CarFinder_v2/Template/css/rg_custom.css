@@ -1,0 +1,112 @@
+﻿/* Custom Fonts ===========*/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('/Template/fonts/icomoon.eot?maliue');
+	src:url('/Template/fonts/icomoon.eot?#iefixmaliue') format('embedded-opentype'),
+		url('/Template/fonts/icomoon.ttf?maliue') format('truetype'),
+		url('/Template/fonts/icomoon.woff?maliue') format('woff'),
+		url('/Template/fonts/icomoon.svg?maliue#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-AngularJS-Shield-large:before {
+	content: "\e600";
+}
+
+/* Custom Hover ===========*/
+
+.social_hover:hover {
+    background-color:#FF931E;
+}
+
+/* Coder Foundry Orange ===========*/
+
+.coder_orange {
+    color:#FF931E;
+}
+
+.section-title {
+    color:#FF931E;
+}
+.section-subtitle::after {
+    color:#FF931E;
+}
+
+.clickable {
+    cursor:pointer;
+}
+
+.hold_on {
+    position:absolute;
+}
+
+.stay_put {
+    position:fixed;
+}
+.modal-content {
+    background-color: #484c53;
+    margin:auto;
+    min-width:15%;
+    max-width:50%;
+    overflow:auto;
+    position:relative;
+    margin-top:12em;
+
+
+}
+
+.p_top {
+    padding-top:3em;
+    padding-bottom:2em;
+}
+
+.nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+    
+}
+
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified > li > a {
+    border: 1px solid #4e5d6c;
+    border-radius: 0 0 0 0;
+  }
+  .nav-tabs.nav-justified > .active > a,
+  .nav-tabs.nav-justified > .active > a:hover,
+  .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #4e5d6c;
+  }
+}
+
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
+     border-bottom: 1px solid #4e5d6c;
+     border-radius: 0 0 0 0;
+}
+
+.car_details {
+    background-color: #484C53;
+}
+
+body.btn-circle .btn {
+    border-radius: 5px;
+}
+
+.btn_coder_orange{
+    background-color:#FF931E;
+}

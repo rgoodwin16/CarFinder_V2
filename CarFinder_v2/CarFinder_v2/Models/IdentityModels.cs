@@ -40,14 +40,14 @@ namespace CarFinder_v2.Models
             return await Database.SqlQuery<string>("GetYears").ToListAsync();
         }
 
-        public async Task<List<string>> GetMakes(int year)
+        public async Task<List<string>> GetMakes(string year)
         {
             var yearParam = new SqlParameter("@year", year);
 
             return await Database.SqlQuery<string>("GetMakes @year", yearParam).ToListAsync();
         }
 
-        public async Task<List<string>> GetModels(int year, string make)
+        public async Task<List<string>> GetModels(string year, string make)
         {
             var yearParam = new SqlParameter("@year", year);
             var makeParam = new SqlParameter("@make", make);
@@ -55,7 +55,7 @@ namespace CarFinder_v2.Models
             return await Database.SqlQuery<string>("GetModels @year, @make", yearParam, makeParam).ToListAsync();
         }
 
-        public async Task<List<string>> GetTrims(int year, string make, string model)
+        public async Task<List<string>> GetTrims(string year, string make, string model)
         {
             var yearParam = new SqlParameter("@year", year);
             var makeParam = new SqlParameter("@make", make);
@@ -64,14 +64,16 @@ namespace CarFinder_v2.Models
             return await Database.SqlQuery<string>("GetTrims @year, @make, @model", yearParam, makeParam,modelParam).ToListAsync();
         }
 
-        public async Task<List<Car>> GetCars(int year, string make, string model, string trim, string filter, bool? paging, int? page, int? perPage)
+        public async Task<List<Car>> GetCars(string year, string make, string model, string trim, string filter, bool? paging, int? page, int? perPage)
         {
 
+            
+            
             var yearParam = new SqlParameter("@year", year);
             var makeParam = new SqlParameter("@make", make);
             var modelParam = new SqlParameter("@model", model);
             var trimParam = new SqlParameter("@trim", trim);
-            var filterParam = new SqlParameter("@filter", filter);
+            var filterParam = new SqlParameter("@filter", filter ?? "");
             
 
 

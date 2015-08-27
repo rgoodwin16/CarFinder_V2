@@ -1,0 +1,565 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CarFinder - an Angular JS Car Finding app Developed by Ray Goodwin">
+    <meta name="author" content="TemplatesPRO.com.br">
+    <meta name="robots" content="index,follow">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="CarFinder - an Angular JS Car Finding app Developed by Ray Goodwin">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#db5945">
+    <title>CarFinder - an Angular JS Car Finding app Developed by Ray Goodwin</title>
+
+    <!-- Facebook -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:url" content="http://www.templatespro.com.br/mos7/">
+    <meta property="og:title" content="Mos7">
+    <meta property="og:site_name" content="Templates PRO">
+    <meta property="og:description" content="CarFinder - an Angular JS Car Finding app Developed by Ray Goodwin">
+    <meta property="og:image" content="http://www.templatespro.com.br/images/mos7.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="80">
+    <meta property="og:image:height" content="80">
+    <meta property="og:type" content="website">
+
+    <!-- Fav and Touch Icons -->
+    <meta name="msapplication-TileColor" content="#d9534f">
+    <meta name="msapplication-TileImage" content="Template/images/favicons/cf_144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="Template/images/favicons/cf_57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Template/images/favicons/cf_60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Template/images/favicons/cf_72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Template/images/favicons/cf_76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Template/images/favicons/cf_114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Template/images/favicons/cf_120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Template/images/favicons/cf_144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Template/images/favicons/cf_152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Template/images/favicons/cf_180.png">
+    <link rel="icon" type="image/png" href="Template/images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Template/images/favicons/cf_192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="Template/images/favicons/cf_96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="Template/images/favicons/cf_16.png" sizes="16x16">
+    <link rel="manifest" href="Template/images/favicons/manifest.json">
+    <link rel="shortcut icon" href="Template/images/favicons/cf_favicon.ico">
+
+    <!-- Bootstrap 3.3.5 -->
+    <link href="Template/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--=== FONT ICONS ===-->
+    <!-- Font Awesome 4.3.0 -->
+    
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- IonIcons 2.0.1 -->
+    <link href="Template/assets/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Elegant Icons -->
+    <link href="Template/assets/elegant-icons/css/elegant-icons.min.css" rel="stylesheet">
+    <!--[if lte IE 7]><script src="assets/elegant-icons/js/elegant-icons-lte-ie7.min.js"></script><![endif]-->
+    <!--=== VENDORS ===-->
+    <!-- Slick Carousel -->
+    <link href="Template/css/vendor/slick.min.css" rel="stylesheet">
+    <link href="Template/css/vendor/slick-theme.min.css" rel="stylesheet">
+
+    <!-- Blueimp Gallery Lightbox -->
+    <link href="Template/css/vendor/blueimp-gallery.min.css" rel="stylesheet">
+
+    <!-- Custom -->
+    <link href="Template/css/main.min.css" rel="stylesheet">
+    <link href="Template/css/all_components.min.css" rel="stylesheet">
+
+    <!-- Theme -->
+    <link href="Template/css/colors/dark.min.css" rel="stylesheet">
+
+    <!-- Colors -->
+    <link href="Template/css/colors/orange.min.css" rel="stylesheet">
+   
+    <!-- RG Custom CSS -->
+    <link href="Template/css/rg_custom.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="https://i.icomoon.io/public/temp/2ebe7a5791/UntitledProject/style.css">-->
+   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!--[if gt IE 8]>
+        <link href="css/ie9.min.css" rel="stylesheet">
+      <![endif]-->
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+    
+</head>
+
+<body class="btn-circle sld-transition-2" id="anch-top" data-spy="scroll" data-target=".navbar" >
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="status"></div>
+    </div>
+    <!-- End Preloader -->
+    <!-- LAYOUT -->
+    <div class="layout">
+
+        <!-- HEADER -->
+        <header>
+
+            <!-- SLIDESHOW -->
+            <section class="slideshow">
+                <div class="container-fluid">
+                    <div class="r1 row">
+                        <div class="c1 col-md-12">
+                            <div class="carousel slide" id="slideshow-carousel-1" data-ride="carousel">
+
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li class="active" data-target="#slideshow-carousel-1" data-slide-to="0"></li>
+                                    <li data-target="#slideshow-carousel-1" data-slide-to="1"></li>
+                                    <li data-target="#slideshow-carousel-1" data-slide-to="2"></li>
+
+                                </ol>
+                                <!-- End Indicators -->
+                                <!-- Wrapper for Slides -->
+                                <div class="carousel-inner">
+
+                                    <!-- Slide 1 -->
+                                    <div class="item item-1 slide-text active">
+                                        <img class="img-responsive bg-item parallax" data-speed="1" src="Template/images/slideshow/Car_Reliable.jpg" alt="Slide 1 Background">
+                                        <div class="carousel-caption">
+                                            <h2 class="title"><br><small class="brand"></small></h2>
+
+                                        </div>
+                                    </div>
+                                    <!-- End Slide 1 -->
+                                    <!-- Slide 2 -->
+                                    <div class="item item-2 slide-form">
+                                        <img class="img-responsive bg-item parallax" data-speed="1" src="Template/images/slideshow/Car_Fast.png" alt="Slide 2 Background">
+                                        <div class="carousel-caption">
+                                            <div class="c2 col-xs-12 col-sm-12 col-md-6">
+                                                <h2 class="title"><br><small class="brand"></small></h2>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- End Slide 2 -->
+                                    <!-- Slide 3 -->
+                                    <div class="item item-3 slide-image">
+                                        <img class="img-responsive bg-item parallax" data-speed="1" src="Template/images/slideshow/Car_Strong.jpg" alt="Slide 3 Background">
+                                        <div class="carousel-caption">
+
+                                            <div class="c5 col-xs-12 col-sm-7 col-md-7">
+                                                <h2 class="title"><br><small class="brand"></small></h2>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Slide 3 -->
+
+
+                                </div>
+                                <!-- End Wrapper for Slides -->
+                                <!-- Controls -->
+                                <a class="left carousel-control" data-slide="prev" href="#slideshow-carousel-1">
+                                    <span class="fa fa-angle-left"></span>
+                                </a>
+                                <a class="right carousel-control" data-slide="next" href="#slideshow-carousel-1">
+                                    <span class="fa fa-angle-right"></span>
+                                </a>
+                                <!-- End Controls -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END SLIDESHOW -->
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and Toggle -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#anch-top">Car<span style="color:#f39c12">Finder</span></a>
+                    </div>
+                    <!-- End Brand and Toggle -->
+                    <!-- Menu -->
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                <a href="#anch-top">Home</a>
+                            </li>
+                            <li data-toggle="collapse" data-target="#navbar-collapse-1">
+                                <a href="#anch-features">Features</a>
+                            </li>
+                            <li data-toggle="collapse" data-target="#navbar-collapse-1">
+                                <a href="#anch-overview">Get Started</a>
+                            </li>
+
+                            <li data-toggle="collapse" data-target="#navbar-collapse-1">
+                                <a href="#anch-contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Menu -->
+                </div>
+            </nav>
+            <!-- END NAVBAR -->
+
+        </header>
+        <!-- END HEADER -->
+        <!-- MAIN -->
+        <div class="main">
+
+            <!-- FEATURES -->
+            <section class="features" id="anch-features">
+                <div class="container">
+                    <!-- Section Header -->
+                    <div class="section-header">
+                        <h2 class="section-title">Welcome To <span style="color:white">Car</span>Finder</h2>
+                        <h3 class="section-subtitle">With CarFinder, your next car is just a click away.</h3>
+                    </div>
+                    <!-- End Section Header -->
+                    <!-- Section Content -->
+                    <div class="r1 row">
+                        <!-- Block 1 -->
+                        <div class="c1 col-sm-6 col-md-3">
+                            <div class="features-wrapper">
+                                <div class="features-icon">
+                                    <span class="icon-AngularJS-Shield-large"></span>
+                                </div>
+                                <div class="features-content">
+                                    <h3 class="title">Clean & Simple Design</h3>
+                                    <p class="description">Lorem ipsum consectetur ultrices ac facilisis est neque fames, eget vel libero egestas viverra lacinia facilisis, augue dictum curabitur inceptos potenti justo fusce.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Block 1 -->
+                        <!-- Block 2 -->
+                        <div class="c2 col-sm-6 col-md-3">
+                            <div class="features-wrapper">
+                                <div class="features-icon">
+                                    <span class="icon_map_alt"></span>
+                                </div>
+                                <div class="features-content">
+                                    <h3 class="title">Fully Responsive</h3>
+                                    <p class="description">Lorem ipsum consectetur ultrices ac facilisis est neque fames, eget vel libero egestas viverra lacinia facilisis, augue dictum curabitur inceptos potenti justo fusce.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Block 2 -->
+                        <!-- Block 3 -->
+                        <div class="c3 col-sm-6 col-md-3">
+                            <div class="features-wrapper">
+                                <div class="features-icon">
+                                    <span class="ion-android-globe"></span>
+                                </div>
+                                <div class="features-content">
+                                    <h3 class="title">Crossbrowser Compatible</h3>
+                                    <p class="description">Lorem ipsum consectetur ultrices ac facilisis est neque fames, eget vel libero egestas viverra lacinia facilisis, augue dictum curabitur inceptos potenti justo fusce.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Block 3 -->
+                        <!-- Block 4 -->
+                        <div class="c4 col-sm-6 col-md-3">
+                            <div class="features-wrapper">
+                                <div class="features-icon">
+                                    <span class="icon_gift_alt"></span>
+                                </div>
+                                <div class="features-content">
+                                    <h3 class="title">Over 1870 Font Icons</h3>
+                                    <p class="description">Lorem ipsum consectetur ultrices ac facilisis est neque fames, eget vel libero egestas viverra lacinia facilisis, augue dictum curabitur inceptos potenti justo fusce.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Block 4 -->
+                    </div>
+                    <!-- End Section Content -->
+                </div>
+            </section>
+            <!-- END FEATURES -->
+            <!-- OVERVIEW -->
+            <section class="overview" id="anch-overview">
+                <div class="container" ng-app="car-finder">
+                    <!-- Section Header -->
+                    <div class="section-header">
+                        <h2 class="section-title">Get Started</h2>
+                        <h3 class="section-subtitle">Lorem ipsum per fames turpis tempor elementum felis venenatis, odio vivamus sagittis massa platea</h3>
+                    </div>
+                    <!-- End Section Header -->
+                    <!-- Section Content -->
+                    <div ng-controller="carController as ctl">
+                        <div class="r1 row">
+                            <div class="col-md-3">
+                                <h4 class="coder_orange"> Select Year:</h4>
+                                <select ng-options="year for year in ctl.options.years"
+                                        ng-model="ctl.selected.year" ng-change="ctl.getMakes()" class="form-control"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <h4 class="coder_orange"> Select Make:</h4>
+                                <select ng-options="make for make in ctl.options.makes"
+                                        ng-model="ctl.selected.make" ng-change="ctl.getModels()" class="form-control"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <h4 class="coder_orange"> Select Model:</h4>
+                                <select ng-options="model for model in ctl.options.models"
+                                        ng-model="ctl.selected.model" ng-change="ctl.getTrims()" class="form-control"></select>
+                            </div>
+                            <div class="col-md-3">
+                                <h4 class="coder_orange"> Select Trim:</h4>
+                                <select ng-options="trim for trim in ctl.options.trims"
+                                        ng-model="ctl.selected.trim" ng-change="ctl.getCars()" class="form-control"></select>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="r1 row">
+                            <table class="table table-hover table-responsive table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Year</th>
+                                        <th>Make</th>
+                                        <th>Model</th>
+                                        <th>Trim</th>
+                                        <th>Body Style</th>
+                                        <th>Engine Fuel</th>
+                                        <th>Fuel Capacity(Gallons | Liters)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="car in ctl.cars">
+                                        <td>{{car.model_year}}</td>
+                                        <td>{{car.make}}</td>
+                                        <td>{{car.model_name}}</td>
+                                        <td>{{car.model_trim}}</td>
+                                        <td>{{car.body_style}}</td>
+                                        <td>{{car.engine_fuel}}</td>
+                                        <td>{{car.fuel_capacity_l * .264172}} | {{car.fuel_capacity_l}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!-- End Section Content -->
+                </div>
+            </section>
+            <!-- END OVERVIEW -->
+            <!-- END TEAM -->
+            <!-- CONTACT -->
+            <section class="contact" id="anch-contact">
+                <div class="container-fluid">
+                    <!-- Section Header -->
+                    <div class="section-header">
+                        <h2 class="section-title">Contact</h2>
+                        <h3 class="section-subtitle">Lorem ipsum per fames turpis tempor elementum felis venenatis, odio vivamus sagittis massa platea</h3>
+                    </div>
+                    <!-- End Section Header -->
+                    <!-- Section Content -->
+                    <div class="r1 row">
+                        <div class="c1 col-md-12">
+                            <!-- Map accordion -->
+                            <div class="panel-group" id="contact-accordion-1">
+                                <div class="panel panel-default">
+                                    <h3 class="map-title">
+                                        <a data-toggle="collapse" data-parent="#contact-accordion-1" href="#contact-collapse-1" aria-expanded="true" aria-controls="contact-collapse-1"><span class="glyphicon glyphicon-map-marker"></span><br>Where</a>
+                                    </h3>
+                                    <div class="panel-collapse collapse in" id="contact-collapse-1">
+                                        <div class="panel-body">
+                                            <!-- Map -->
+                                            <div class="map-wrapper">
+                                                <!-- Here is where the map will be rendered -->
+                                                <div id="map-canvas"></div>
+                                                <!-- Address over the map -->
+                                                <!-- End Address over the map -->
+                                            </div>
+                                            <!-- End Map -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Map accordion -->
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="col-md-6 col-sm-6 centered">
+                        <h2>Instructed by:</h2>
+
+                        <a href="http://coderfoundry.com"><img class="img-responsive" src="Template/images/coder.png" width="400" height="133" /></a>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 centered">
+                        <h2>Developed by:</h2>
+                        <p><a href="https://rgoodwin.azurewebsites.net"><img class="img-responsive" src="Template/images/ray_goodwin_lg.png" /></a></p>
+                        <hr />
+
+                    </div>
+                </div>
+                <!-- End Section Content -->
+            </section>
+            <!-- END CONTACT -->
+
+        </div>
+        <!-- END MAIN -->
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="r1 row">
+                    <div class="c1 col-md-12">
+                        <h1></h1>
+                        <!-- Social Buttons -->
+                        <section class="social-icons">
+                            <h3 class="hide">Social Buttons</h3>
+                            <h3>Contact Me:</h3>
+                            <a class="btn-social social_hover" href="https://www.linkedin.com/pub/ray-goodwin/102/426/305" title=""><span class="fa fa-github"></span></a>
+                            <a class="btn-social social_hover" href="https://github.com/rgoodwin16" title=""><span class="fa fa-linkedin"></span></a>
+
+                        </section>
+                        <!-- End Social Buttons -->
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <div class="r1 row">
+                        <div class="c1 col-md-12">
+                            <p>&copy; 2015 - Mos7 Theme. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+
+        <a class="go-top" href="#anch-top"><span class="fa fa-chevron-up"></span></a>
+
+    </div>
+    <!-- END LAYOUT -->
+    <!-- MODALS -->
+    <!-- Modal - Slideshow - Slide Form -->
+    <div class="modal fade" id="modal-slide-form" tabindex="-1" role="dialog" aria-labelledby="title-modal-slide-form" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title text-center" id="title-modal-slide-form">Start your FREE trial</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="alerts alerts-trial-modal"></div>
+                    <!-- Modal Subscription form -->
+                    <div class="form-horizontal modal-trial-form" role="form">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" id="modal-trial-name" name="modal-trial-name" type="text" placeholder="Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="modal-trial-email" name="modal-trial-email" type="email" placeholder="Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="modal-trial-phone" name="modal-trial-phone" type="tel" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-lg btn-block btn-danger btn-submit submit-modal-form-trial" type="submit">Get Your Free Trial</button>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!-- End Modal Subscription form -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Slideshow - Slide Video -->
+    <div class="modal fade" id="modal-slide-video" tabindex="-1" role="dialog" aria-labelledby="title-modal-slide-video" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title text-center" id="title-modal-slide-video">Video Demo</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- 4:3 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-4by3">
+                        <!--<iframe class="embed-responsive-item" src="//www.youtube-nocookie.com/embed/ct7E31Pcbso?controls=0&amp;rel=0&amp;showinfo=0&amp;autohide=1&amp;iv_load_policy=3" allowfullscreen></iframe>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+
+
+
+    <!-- Bootstrap 3.3.5 -->
+
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <!-- Retina Graphics -->
+    <script src="Template/js/vendor/retina.min.js"></script>
+
+    <!-- Nicescroll Scrollbars -->
+    <script src="Template/js/vendor/jquery.nicescroll.min.js"></script>
+
+    <!-- Countdown -->
+    <script src="Template/js/vendor/jquery.countdown.min.js"></script>
+
+    <!-- Circliful Circle Statistics -->
+    <script src="Template/js/vendor/circles.min.js"></script>
+
+    <!-- Slick Carousel -->
+    <script src="Template/js/vendor/slick.min.js"></script>
+
+    <!-- BlueImp Gallery Lightbox -->
+    <script src="Template/js/vendor/jquery.blueimp-gallery.min.js"></script>
+
+    <!-- Mailchimp Ajax Subscription -->
+    <script src="Template/js/vendor/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="Template/js/google_map.js"></script>
+
+    <!-- Placeholder Polyfill IE9 -->
+    <script src="Template/js/vendor/simple.min.js"></script>
+
+    <!-- Default General Settings -->
+    <script src="Template/js/main.js"></script>
+    
+    <!-- Angular -->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+
+    <!-- Custom Angular App -->
+    <script src="App/app.js"></script>
+
+    <script src="App/carSvc.js"></script>
+
+    <script src="App/carController.js"></script>
+</body>
+
+</html>

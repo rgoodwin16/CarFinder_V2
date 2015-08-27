@@ -1,0 +1,35 @@
+﻿<div class="modal-header">
+    
+</div>
+<div class="modal-body">
+    <img ng-src="{{mCtrl.car.image}}" class="img-responsive"/>
+    <hr />
+    <h3 class="modal-title">{{mCtrl.car.car.make}} {{mCtrl.car.car.model_name}} </h3>
+    <div class="c1 col-md-12 p_top">
+        <tabset  justified="true">
+            <tab heading="Details" class="btn-lg">
+                
+                <div class="row">
+                    <div class="col-xs-12 car_details">
+                        <h3 class="title coder_orange">Body Trim</h3>
+                        <p class="description">{{mCtrl.car.car.model_trim}}</p>
+                        <h3 class="title coder_orange">Body Style</h3>
+                        <p class="description">{{mCtrl.car.car.body_style}}</p>
+                        <h3 class="title coder_orange">Engine Fuel</h3>
+                        <p class="description">{{mCtrl.car.car.engine_fuel}}</p>
+                        <h3 class="title coder_orange">Fuel Capacity</h3>
+                        <p class="description">{{mCtrl.car.car.fuel_capacity_l}}</p>
+                    </div><!-- /body style | body trim -->
+                    
+                </div>
+                 
+            </tab>
+            <tab heading="Recalls" class="btn-lg">
+                
+            </tab>
+        </tabset>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary btn_coder_orange" type="button" ng-click="mCtrl.ok()">Close</button>
+</div>

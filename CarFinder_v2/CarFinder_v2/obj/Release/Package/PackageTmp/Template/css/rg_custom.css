@@ -1,0 +1,49 @@
+﻿/* Custom Fonts ===========*/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('/Template/fonts/icomoon.eot?maliue');
+	src:url('/Template/fonts/icomoon.eot?#iefixmaliue') format('embedded-opentype'),
+		url('/Template/fonts/icomoon.ttf?maliue') format('truetype'),
+		url('/Template/fonts/icomoon.woff?maliue') format('woff'),
+		url('/Template/fonts/icomoon.svg?maliue#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-AngularJS-Shield-large:before {
+	content: "\e600";
+}
+
+/* Custom Hover ===========*/
+
+.social_hover:hover {
+    background-color:#FF931E;
+}
+
+/* Coder Foundry Orange ===========*/
+
+.coder_orange {
+    color:#FF931E;
+}
+
+.section-title {
+    color:#FF931E;
+}
+.section-subtitle::after {
+    color:#FF931E;
+}

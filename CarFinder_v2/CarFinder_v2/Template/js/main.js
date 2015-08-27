@@ -99,9 +99,7 @@ $(document).ready(function () {
   /***********************************************************************************************
    5) Component Slideshow - Carousel
    ***********************************************************************************************/
-  $('#slideshow-carousel-1').carousel({
-    interval: 10000
-  });
+
 
   /***********************************************************************************************
    6) Component Slideshow - Countdown
@@ -235,11 +233,11 @@ $(document).ready(function () {
   /***********************************************************************************************
    9) Navbar Fixed to Top
    ***********************************************************************************************/
-  $('.navbar').affix({
-    offset: {
-      top: $(window).height() - $('.navbar').height() - 2
-    }
-  });
+  //$('.navbar').affix({
+  //  offset: {
+  //    top: $(window).height() - $('.navbar').height() - 2
+  //  }
+  //});
 
   /***********************************************************************************************
    10) ScrollTo - Navigation
@@ -285,26 +283,26 @@ $(document).ready(function () {
   /***********************************************************************************************
    12) Component Testimonials - Carousel
    ***********************************************************************************************/
-  $('#testimonials-carousel-1').carousel({
-    interval: 10000
-  });
+  //$('#testimonials-carousel-1').carousel({
+  //  interval: 10000
+  //});
 
-  function testimonialControl() {
-    var $testimonial = $('.testimonials'),
-        windowTop = $(window).scrollTop(),
-        testimonialTop = $testimonial.offset().top,
-        testimonialBottom = testimonialTop + $testimonial.height();
+  //function testimonialControl() {
+  //  var $testimonial = $('.testimonials'),
+  //      windowTop = $(window).scrollTop(),
+  //      //testimonialTop = $testimonial.offset().top,
+  //      testimonialBottom = testimonialTop + $testimonial.height();
 
-    if (testimonialBottom <= windowTop) {
-      $('#testimonials-carousel-1').carousel('pause');
-    } else {
-      $('#testimonials-carousel-1').carousel('cycle');
-    }
-  }
+  //  if (testimonialBottom <= windowTop) {
+  //    $('#testimonials-carousel-1').carousel('pause');
+  //  } else {
+  //    $('#testimonials-carousel-1').carousel('cycle');
+  //  }
+  //}
 
-  $(window).scroll(function () {
-    testimonialControl();
-  });
+  //$(window).scroll(function () {
+  //  testimonialControl();
+  //});
 
   /***********************************************************************************************
    13) Animations and Component Stats - Circles Stats
@@ -497,7 +495,7 @@ $(document).ready(function () {
   /***********************************************************************************************
    16) Tooltips
    ***********************************************************************************************/
-  $('a[data-toggle=tooltip]').tooltip();
+  //$('a[data-toggle=tooltip]').tooltip();
 
   /***********************************************************************************************
    17) Close Modal Video
